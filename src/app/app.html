@@ -2,6 +2,7 @@
   <h1>{{ title() }}</h1>
 
   <h2>Recipe</h2>
+  <img [src]="recipe().imgUrl" [alt]="recipe().name" width="300" />
   <p>name: {{ recipe().name }}</p>
   <p>description: {{ recipe().description }}</p>
 
