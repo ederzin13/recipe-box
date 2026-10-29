@@ -12,6 +12,7 @@ import { RecipeModel } from './models';
 export class App {
   protected readonly title = signal('My Recipe Box');
   protected readonly recipe = signal<RecipeModel>(MOCK_RECIPES[0]);
+  protected readonly servings = signal<number>(1);
 
   protected selectSpaghetti(): void {
     console.log('Spaghetti Carbonara selecionado');
@@ -23,5 +24,13 @@ export class App {
     console.log('Caprese Salad selecionada');
 
     this.recipe.set(MOCK_RECIPES[1]);
+  }
+
+  protected incrementServings(): void {
+    this.servings.update((current) => current + 1);
+  }
+
+  protected decrementServings(): void {
+    this.servings.update((current) => current - 1);
   }
 }
