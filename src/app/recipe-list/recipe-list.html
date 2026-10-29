@@ -2,3 +2,7 @@
 <button (click)="selectSalad()">Salad</button>
 
 <app-recipe-detail [recipe]="recipe()" />
+
+@if (recipe().isFavorite) {
+  <span class="badge">⭐ Receita Favorita</span>
+}
