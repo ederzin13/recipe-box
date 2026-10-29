@@ -1,0 +1,119 @@
+/* Cartão principal com Flexbox e espaçamento interno (padding) */
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 460px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eaeaea;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  margin: 1.5rem auto;
+}
+
+/* Imagem ajustada com cantos superiores e proporção bonita */
+.recipe-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Área de conteúdo com respiro (whitespace) */
+.recipe-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+/* Hierarquia visual: Nome grande e com destaque */
+.recipe-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+/* Descrição menor e com cor mais suave */
+.recipe-description {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Seção de porções em linha com Flexbox */
+.servings-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #f3f4f6;
+}
+
+.servings-label {
+  font-weight: 600;
+  color: #374151;
+}
+
+.servings-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.servings-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  min-width: 2rem;
+  text-align: center;
+  color: #111827;
+}
+
+/* Botões modernos */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #374151;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+/* Bloco dos ingredientes */
+.ingredients-section {
+  margin-top: 0.5rem;
+}
+
+.ingredients-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 0.5rem 0;
+}
+
+.ingredients-json {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #334155;
+  overflow-x: auto;
+}

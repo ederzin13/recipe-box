@@ -1,11 +1,24 @@
-<h2>Recipe</h2>
-<img [src]="recipe().imgUrl" [alt]="recipe().name" width="300" />
-<p>name: {{ recipe().name }}</p>
-<p>description: {{ recipe().description }}</p>
+<article class="recipe-card">
+  <img [src]="recipe().imgUrl" [alt]="recipe().name" class="recipe-image" />
 
-<p>{{ servings() }}</p>
+  <div class="recipe-content">
+    <h2 class="recipe-name">{{ recipe().name }}</h2>
+    <p class="recipe-description">{{ recipe().description }}</p>
 
-<pre>{{ adjustedIngredients() | json }}</pre>
+    <!-- Controle de porções -->
+    <div class="servings-section">
+      <span class="servings-label">Porções:</span>
+      <div class="servings-controls">
+        <button class="btn btn-secondary" (click)="decrementServings()">-</button>
+        <span class="servings-value">{{ servings() }}</span>
+        <button class="btn btn-secondary" (click)="incrementServings()">+</button>
+      </div>
+    </div>
 
-<button (click)="incrementServings()">Increment</button>
-<button (click)="decrementServings()">Decrement</button>
+    <!-- Ingredientes calculados -->
+    <div class="ingredients-section">
+      <h3 class="ingredients-title">Ingredientes Ajustados:</h3>
+      <pre class="ingredients-json">{{ adjustedIngredients() | json }}</pre>
+    </div>
+  </div>
+</article>
