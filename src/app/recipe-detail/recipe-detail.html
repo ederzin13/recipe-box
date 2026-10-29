@@ -18,7 +18,13 @@
     <!-- Ingredientes calculados -->
     <div class="ingredients-section">
       <h3 class="ingredients-title">Ingredientes Ajustados:</h3>
-      <pre class="ingredients-json">{{ adjustedIngredients() | json }}</pre>
+
+      @for (ingredient of adjustedIngredients(); track ingredient.name) {
+        <ul>
+          <li>{{ ingredient.name }}</li>
+          <li>{{ ingredient.quantity }} - {{ ingredient.unit }}</li>
+        </ul>
+      }
     </div>
   </div>
 </article>
